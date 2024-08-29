@@ -6,7 +6,6 @@ const Dashboard = () => {
         <div className='dashboard-container'>
             <Navbar />
             <div className="dashboard-contents">
-                <div className="profilepic" id="items">profile picture</div>
                 <div className="welcome-text" id="items"><h2>Welcome back Sheshan !</h2></div>
                 <div className="plan" id="items">
                     <h4>Plan | Freemium</h4>
