@@ -1,25 +1,26 @@
-// src/services/firebase.js
-
+// Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
 import { getAnalytics } from 'firebase/analytics';
-import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: 'AIzaSyCVK1C5A8tzd75G50L9SMoZg1CEi8NPzfo',
-  authDomain: 'personal-trainer-72d8d.firebaseapp.com',
-  projectId: 'personal-trainer-72d8d',
-  storageBucket: 'personal-trainer-72d8d.appspot.com',
-  messagingSenderId: '634042426536',
-  appId: '1:634042426536:web:dd665dfed5a94895834e9d',
-  measurementId: 'G-8RRSERT121',
+  apiKey: 'AIzaSyByLcUKs_I2Iy7_C6uPUqXkZ5v3i9SQSIw',
+  authDomain: 'rechart-74a34.firebaseapp.com',
+  projectId: 'rechart-74a34',
+  storageBucket: 'rechart-74a34.appspot.com',
+  messagingSenderId: '168798500684',
+  appId: '1:168798500684:web:569113612c01c2ae3d41e9',
+  measurementId: 'G-P6E3B5ENC5',
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const db = getFirestore(app);
-const auth = getAuth(app);
-
-export { app, analytics, db, auth };
+export const app = initializeApp(firebaseConfig);
+export const analytics = getAnalytics(app);
+export const auth = getAuth(app);
+export const db = getFirestore(app);
