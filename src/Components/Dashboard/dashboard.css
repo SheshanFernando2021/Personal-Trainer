@@ -1,111 +1,147 @@
 .dashboard-container {
-    height: 100svh;
-    width: 100%;
-    display: flex;
-    border: 1px solid black;
-    background-color: bisque;
-    overflow: hidden;
-    justify-content: end;
+  height: 100svh;
+  width: 100%;
+  display: flex;
+  border: 1px solid black;
+  background-color: bisque;
+  overflow: hidden;
+  justify-content: end;
+}
+
+.dashboard-container {
+  font-family: Arial, sans-serif;
 }
 
 .dashboard-contents {
-    margin-top: 20px;
-    display: grid;
-    grid-template-columns: repeat(32, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    width: 81%;
-    height: 100%;
+  padding: 20px;
 }
 
 #items {
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin-bottom: 20px;
 }
 
+input {
+  margin-left: 10px;
+}
+.dashboard-contents {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(32, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  width: 81%;
+  height: 100%;
+}
+
+#items {
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .welcome-text {
-    grid-column: 5/14;
-    grid-row: 1/2;
-    border: 1px solid black;
-
+  grid-column: 5/14;
+  grid-row: 1/2;
+  border: 1px solid black;
 }
 
 .profilepic {
-    border-radius: 50%;
-    border: 1px solid black;
-    grid-column: 2/4;
-    grid-row: 1;
-    text-align: center;
+  border-radius: 50%;
+  border: 1px solid black;
+  grid-column: 2/4;
+  grid-row: 1;
+  text-align: center;
 }
 
 .plan {
-    border: 1px solid black;
-    grid-column: 28/32;
-    grid-row: 1;
+  border: 1px solid black;
+  grid-column: 28/32;
+  grid-row: 1;
 }
 
 .current-weight {
-    border: 1px solid black;
-    grid-column: 9/17;
-    grid-row: 3;
+  border: 1px solid black;
+  grid-column: 9/17;
+  grid-row: 3;
 }
 
 .current-height {
-    border: 1px solid black;
-    grid-column: 18/26;
-    grid-row: 3;
+  border: 1px solid black;
+  grid-column: 18/26;
+  grid-row: 3;
 }
 
 .chest-day {
-    border: 1px solid black;
-    grid-column: 1/8;
-    grid-row: 5;
-    gap: 10px;
+  border: 1px solid black;
+  grid-column: 1/8;
+  grid-row: 5;
+  gap: 10px;
 }
 
 .arm-day {
-    border: 1px solid black;
-    grid-column: 9/16;
-    grid-row: 5;
-    gap: 10px;
+  border: 1px solid black;
+  grid-column: 9/16;
+  grid-row: 5;
+  gap: 10px;
 }
 
 .back-day {
-    border: 1px solid black;
-    grid-column: 17/24;
-    grid-row: 5;
-    gap: 10px;
+  border: 1px solid black;
+  grid-column: 17/24;
+  grid-row: 5;
+  gap: 10px;
 }
 
 .leg-day {
-    border: 1px solid black;
-    grid-column: 25/32;
-    grid-row: 5;
-    gap: 10px;
+  border: 1px solid black;
+  grid-column: 25/32;
+  grid-row: 5;
+  gap: 10px;
 }
 
 .chest-day-graph {
-    border: 1px solid black;
-    grid-column: 1/8;
-    grid-row: 7/12;
+  border: 1px solid black;
+  grid-column: 1/8;
+  grid-row: 7/12;
 }
 
 .arm-day-graph {
-    border: 1px solid black;
-    grid-column: 9/16;
-    grid-row: 7/12;
+  border: 1px solid black;
+  grid-column: 9/16;
+  grid-row: 7/12;
 }
 
 .back-day-graph {
-    border: 1px solid black;
-    grid-column: 17/24;
-    grid-row: 7/12;
+  border: 1px solid black;
+  grid-column: 17/24;
+  grid-row: 7/12;
 }
 
 .leg-day-graph {
-    border: 1px solid black;
-    grid-column: 25/32;
-    grid-row: 7/12;
+  border: 1px solid black;
+  grid-column: 25/32;
+  grid-row: 7/12;
+}
+.logbackin-bg {
+  background: url(../../assets/Personal.png);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logbackin-bg p {
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  background-color: rgb(70, 70, 70);
+  border: 2px solid white;
+  box-shadow: 5px 5px 5px white;
+}
+.logbackin-bg a {
+  text-decoration: none;
+  color: white;
 }
