@@ -1,15 +1,22 @@
-* > .dashboard-container {
+*>.dashboard-container {
   font-weight: bold;
 }
+
 .dashboard-container h1 {
   font-size: 2.2rem;
-  margin-bottom: 3rem;
   margin-top: 2rem;
 }
+
 input {
-  margin-bottom: 10px;
   text-align: center;
 }
+
+.onlyinputs {
+  display: flex;
+  margin-top: 20px;
+  gap: 40px;
+}
+
 .dashboard-container,
 .out {
   height: 100vh;
@@ -25,26 +32,35 @@ input {
   justify-content: center;
   font-family: 'Aldrich', sans-serif;
 }
+
 .out a {
   color: white;
   text-decoration: none;
 }
+
 .dashboard-container .both {
-  background-color: rgba(255, 255, 255, 0.405); /* Slightly transparent white */
+  background-color: rgba(255, 255, 255, 0.405);
+  /* Slightly transparent white */
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px); /* For Safari */
+  -webkit-backdrop-filter: blur(10px);
+  /* For Safari */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid rgba(255, 255, 255, 0.3); /* Light border */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  border-radius: 10px; /* Rounded corners */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* Light border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  border-radius: 10px;
+  /* Rounded corners */
   width: 80%;
 }
+
 .dashboard-container form {
   text-align: center;
 }
+
 button {
   padding: 10px 20px;
   font-weight: bold;
@@ -53,6 +69,7 @@ button {
   border: 1px solid black;
   margin-bottom: 20px;
 }
+
 button:hover {
   background-color: #00000080;
   color: white;

@@ -314,37 +314,40 @@ const Dashboard = () => {
 
             <div className="inputs">
               <form onSubmit={submitHandler}>
-                <p>Chest Day</p>
-                <input
-                  type="number"
-                  placeholder="Chest Day"
-                  value={chestDay}
-                  onChange={(e) => setChestDay(Number(e.target.value))}
-                />
+                <div className="onlyinputs">
+                  <div className="set"> <p>Chest Day</p>
+                    <input
+                      type="number"
+                      placeholder="Chest Day"
+                      value={chestDay}
+                      onChange={(e) => setChestDay(Number(e.target.value))}
+                    /></div>
 
-                <p>Arm Day</p>
-                <input
-                  type="number"
-                  placeholder="Arm Day"
-                  value={armDay}
-                  onChange={(e) => setArmDay(Number(e.target.value))}
-                />
+                  <div className="set"> <p>Arm Day</p>
+                    <input
+                      type="number"
+                      placeholder="Arm Day"
+                      value={armDay}
+                      onChange={(e) => setArmDay(Number(e.target.value))}
+                    /></div>
 
-                <p>Leg Day</p>
-                <input
-                  type="number"
-                  placeholder="Leg Day"
-                  value={legDay}
-                  onChange={(e) => setLegDay(Number(e.target.value))}
-                />
+                  <div className="set"> <p>Leg Day</p>
+                    <input
+                      type="number"
+                      placeholder="Leg Day"
+                      value={legDay}
+                      onChange={(e) => setLegDay(Number(e.target.value))}
+                    />
+                  </div>
+                  <div className="set"> <p>Back Day</p>
+                    <input
+                      type="number"
+                      placeholder="Back Day"
+                      value={backDay}
+                      onChange={(e) => setBackDay(Number(e.target.value))}
+                    /></div>
+                </div>
 
-                <p>Back Day</p>
-                <input
-                  type="number"
-                  placeholder="Back Day"
-                  value={backDay}
-                  onChange={(e) => setBackDay(Number(e.target.value))}
-                />
                 <br />
                 <br />
 
