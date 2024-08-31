@@ -405,6 +405,8 @@ const Dashboard = () => {
               </AreaChart>
             </ResponsiveContainer>
             <button onClick={signOutHandler}>Sign Out</button>
+            <button onClick={()=>(navigate('/timer'))}>to Timer</button>
+            <button onClick={()=>(navigate('/recipe'))}>to Recipe</button>
           </div>
         </div>
       ) : (
