@@ -52,16 +52,16 @@ const RecipeSearch = () => {
     }
   };
 
-  const fetchNutrition = async (id) => {
+  const fetchRecipeDetails = async (id) => {
     const API_KEY = 'ca2a0e5a2a9247e587041a67f4033bc0';
-    const url = `https://api.spoonacular.com/recipes/${id}/nutritionWidget.json?apiKey=${API_KEY}`;
+    const url = `https://api.spoonacular.com/recipes/${id}/information?apiKey=${API_KEY}`;
 
     try {
       const response = await fetch(url);
-      const nutrition = await response.json();
-      return nutrition;
+      const details = await response.json();
+      return details;
     } catch (error) {
-      console.error('Error fetching nutrition:', error);
+      console.error('Error fetching recipe details:', error);
       return null;
     }
   };
@@ -104,7 +104,7 @@ const RecipeSearch = () => {
           <RecipeCard
             key={recipe.id}
             recipe={recipe}
-            fetchNutrition={fetchNutrition}
+            fetchRecipeDetails={fetchRecipeDetails}
           />
         ))}
       </div>
@@ -112,19 +112,19 @@ const RecipeSearch = () => {
   );
 };
 
-const RecipeCard = ({ recipe, fetchNutrition }) => {
-  const [nutrition, setNutrition] = useState(null);
-  const [isNutritionVisible, setIsNutritionVisible] = useState(false);
+const RecipeCard = ({ recipe, fetchRecipeDetails }) => {
+  const [details, setDetails] = useState(null);
+  const [isDetailsVisible, setIsDetailsVisible] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleNutritionToggle = async () => {
-    if (isNutritionVisible) {
-      setIsNutritionVisible(false);
+  const handleDetailsToggle = async () => {
+    if (isDetailsVisible) {
+      setIsDetailsVisible(false);
     } else {
       setLoading(true);
-      const nutritionData = await fetchNutrition(recipe.id);
-      setNutrition(nutritionData);
-      setIsNutritionVisible(true);
+      const detailsData = await fetchRecipeDetails(recipe.id);
+      setDetails(detailsData);
+      setIsDetailsVisible(true);
       setLoading(false);
     }
   };
@@ -133,39 +133,22 @@ const RecipeCard = ({ recipe, fetchNutrition }) => {
     <div className="recipe-card">
       <h2>{recipe.title}</h2>
       <img src={recipe.image} alt={recipe.title} />
-      <button onClick={handleNutritionToggle}>
-        {isNutritionVisible ? 'Close Nutrition' : 'View Nutrition'}
+      <button onClick={handleDetailsToggle}>
+        {isDetailsVisible ? 'Close Details' : 'View Details'}
       </button>
-      {loading && <p>Loading nutrition data...</p>}
+      {loading && <p>Loading recipe details...</p>}
 
-      {isNutritionVisible && nutrition && (
-        <table className="nutrition-table">
-          <caption>Nutritional Information (per serving)</caption>
-          <thead>
-            <tr>
-              <th>Nutrient</th>
-              <th>Amount</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Calories</td>
-              <td>{nutrition.calories}</td>
-            </tr>
-            <tr>
-              <td>Carbs</td>
-              <td>{nutrition.carbs}</td>
-            </tr>
-            <tr>
-              <td>Fat</td>
-              <td>{nutrition.fat}</td>
-            </tr>
-            <tr>
-              <td>Protein</td>
-              <td>{nutrition.protein}</td>
-            </tr>
-          </tbody>
-        </table>
+      {isDetailsVisible && details && (
+        <div className="recipe-details">
+          <h3>Ingredients</h3>
+          <ul>
+            {details.extendedIngredients.map((ingredient) => (
+              <li key={ingredient.id}>{ingredient.original}</li>
+            ))}
+          </ul>
+          <h3>Instructions</h3>
+          <p>{details.instructions}</p>
+        </div>
       )}
     </div>
   );
