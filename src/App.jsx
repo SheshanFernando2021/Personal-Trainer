@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import Settings from './Components/Settings/Settings'
 import Dashboard from './Components/Dashboard/Dashboard';
 import Timer from './Components/Timer/Timer';
 import Navbar from './Components/Navbar/Navbar';
@@ -19,8 +18,6 @@ const App = () => {
           <Route path="/recipe" element={<RecipeSearch />} />
         </Routes>
       </Router>
-      {/* <SignUp /> */}
-      {/* <Dashboard /> */}
     </div>
   );
 };

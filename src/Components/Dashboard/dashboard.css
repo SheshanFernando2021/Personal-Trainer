@@ -1,4 +1,4 @@
-*>.dashboard-container {
+* > .dashboard-container {
   font-weight: bold;
 }
 
@@ -7,8 +7,12 @@
   margin-top: 2rem;
 }
 
-input {
+.onlyinputs input {
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.634);
+  border: none;
+  font-size: 20px;
+  color: white;
 }
 
 .onlyinputs {
@@ -44,20 +48,15 @@ input {
 
 .dashboard-container .both {
   background-color: rgba(255, 255, 255, 0.405);
-  /* Slightly transparent white */
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  /* For Safari */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  /* Light border */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow */
   border-radius: 10px;
-  /* Rounded corners */
   width: 80%;
 }
 
@@ -65,18 +64,23 @@ input {
   text-align: center;
 }
 
-button {
+.dashboard-container .navbtns button {
   padding: 10px 20px;
   font-weight: bold;
   background-color: #ffffffa8;
-  border-radius: 30px;
+  border-radius: 2px;
   border: 1px solid black;
   margin-bottom: 20px;
+  font-size: 15px;
 }
 
-button:hover {
+.dashboard-container .navbtns button:hover {
   background-color: #00000080;
   color: white;
   border: 1px solid rgb(255, 255, 255);
   cursor: pointer;
+}
+.navbtns {
+  display: flex;
+  gap: 10px;
 }

@@ -1,0 +1,96 @@
+.recipe-search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Aldrich', sans-serif;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(../../assets/recipebg.png);
+  text-align: center;
+  gap: 20px;
+  padding: 0 5px 50px 5px;
+}
+.navbtns button {
+  padding: 5px;
+  font-size: 15px;
+  border: 0.2px solid rgba(0, 0, 0, 0.445);
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.555);
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px rgb(0, 0, 0);
+  font-family: 'Aldrich', sans-serif;
+  margin-top: 50px;
+}
+.recipe-search-container input {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.445);
+  padding: 5px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.445);
+  color: rgba(0, 0, 0, 0.88);
+  box-shadow: 2px 2px 2px rgb(0, 0, 0);
+  outline: none;
+}
+.recipe-search-container .searchbtn {
+  padding: 10px;
+  font-size: 15px;
+  border: 0.2px solid rgba(0, 0, 0, 0.445);
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.793);
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px rgb(0, 0, 0);
+  font-family: 'Aldrich', sans-serif;
+  position: relative;
+  bottom: 3%;
+  font-weight: bold;
+}
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.445);
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.169);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  gap: 20px;
+}
+.recipe-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.recipe-card h2 {
+  font-size: 18px;
+}
+.recipe-card p {
+  font-size: 15px;
+}
+.recipe-card button {
+  padding: 10px 20px;
+  font-size: 15px;
+  border: 0.2px solid rgba(0, 0, 0, 0.445);
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.793);
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  font-family: 'Aldrich', sans-serif;
+  margin-top: 10px;
+  font-weight: bold;
+  position: relative;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: translateX(-50%) scale(1.05);
+  }
+}
