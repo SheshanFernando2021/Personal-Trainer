@@ -129,6 +129,11 @@ const RecipeCard = ({ recipe, fetchRecipeDetails }) => {
     }
   };
 
+  const stripHtmlTags = (text) => {
+    const doc = new DOMParser().parseFromString(text, 'text/html');
+    return doc.body.textContent || '';
+  };
+
   return (
     <div className="recipe-card">
       <h2>{recipe.title}</h2>
@@ -142,12 +147,20 @@ const RecipeCard = ({ recipe, fetchRecipeDetails }) => {
         <div className="recipe-details">
           <h3>Ingredients</h3>
           <ul>
-            {details.extendedIngredients.map((ingredient) => (
-              <li key={ingredient.id}>{ingredient.original}</li>
-            ))}
+            {details.extendedIngredients ? (
+              details.extendedIngredients.map((ingredient) => (
+                <li key={ingredient.id}>{ingredient.original}</li>
+              ))
+            ) : (
+              <p>No ingredients available.</p>
+            )}
           </ul>
           <h3>Instructions</h3>
-          <p>{details.instructions}</p>
+          <p>
+            {details.instructions
+              ? stripHtmlTags(details.instructions)
+              : 'No instructions available.'}
+          </p>
         </div>
       )}
     </div>
