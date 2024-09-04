@@ -5,8 +5,8 @@ import { auth } from '../../../firebase';
 import { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 const SignIn = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('test@gmail.com');
+  const [password, setPassword] = useState('1234567890');
   const navigate = useNavigate();
   const submitSignIn = (e) => {
     e.preventDefault();
